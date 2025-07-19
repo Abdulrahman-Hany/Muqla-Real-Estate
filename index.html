@@ -229,12 +229,14 @@
               stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
           </g>
         </svg>
-        <button
+        <a href="about-us.html">
+          <button
           class="flex relative flex-col justify-center text-orange-100 items-center cursor-pointer px-8 py-4 border border-orange-50 border-solid min-h-[60px] rounded-[40px] w-[180px] max-sm:px-6 max-sm:py-3 max-sm:min-h-[50px] max-sm:w-[150px] transition-all duration-300 hover:bg-[#F4E6D3] hover:text-stone-600 hover:bg-opacity-10">
           <span class="relative text-base font-bold text-right max-sm:text-sm">
             تعرّف على مُقلة
           </span>
         </button>
+      </a>
       </div>
     </section>
     <!-- Scroll Indicator -->
@@ -1826,18 +1828,6 @@
     AOS.init();
   </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.getElementById("menuToggleBtn");
-      const menu = document.getElementById("mainMenu");
-
-      if (toggleBtn && menu) {
-        toggleBtn.addEventListener("click", () => {
-          menu.classList.toggle("hidden");
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>
