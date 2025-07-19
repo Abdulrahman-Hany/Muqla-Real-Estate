@@ -1,0 +1,11 @@
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional: لو بتستخدم أدوات تحرير معينة
+.vscode/
+.idea/
