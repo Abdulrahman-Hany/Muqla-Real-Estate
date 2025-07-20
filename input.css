@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-brand {
+    background-color: #af1e1e;
+  }
+
+  .text-brand {
+    color: #1E40AF;
+  }
+}
+
+* {
+  font-family: 'Cairo', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+
+  @media (width >=576px) {
+    /* sm */
+    max-width: 540px;
+  }
+
+  @media (width >=768px) {
+    /* md */
+    max-width: 720px;
+  }
+
+  @media (width >=992px) {
+    /* lg */
+    max-width: 960px;
+  }
+
+  @media (width >=1200px) {
+    /* xl */
+    max-width: 1140px;
+  }
+
+  @media (width >=1400px) {
+    /* xxl */
+    max-width: 1320px;
+  }
+}
+
+@layer components {
+  .custom-nav-styles {
+    border-radius: 100px;
+    background: rgba(91, 91, 91, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.50) inset, 2px 2px 1px -2px #666 inset, -2px -2px 1px -2px #666 inset, 0px 0px 0px 1px #a6a6a6 inset, 0px 0px 22px 0px #f2f2f21a inset;
+  }
+}
+
+@keyframes wordUp {
+
+  0%,
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40%,
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  90%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wordDown {
+
+  0%,
+  10% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  40%,
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90%,
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.animate-wordUp {
+  animation: wordUp 6s ease-in-out infinite;
+}
+
+.animate-wordDown {
+  animation: wordDown 6s ease-in-out infinite;
+}
+
+.cards {
+  border-radius: 20px;
+  background: rgba(91, 91, 91, 0.25);
+  background-blend-mode: plus-lighter;
+  box-shadow: 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.50) inset, 2px 2px 1px -2px #666 inset, -2px -2px 1px -2px #666 inset, 0px 0px 0px 1px #a6a6a6 inset, 0px 0px 22px 0px #f2f2f21a inset;
+  backdrop-filter: blur(6px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+#loanCard {
+  transition: transform 1s ease-in-out;
+}
+
+.back-liner {
+  background: linear-gradient(180deg, #FFF 0%, #FCF7F1 100%);
+}
+
+.back-about-liner {
+  background: linear-gradient(90deg, var(--Primary-50, rgba(248, 240, 227, 0.48)) 0%, var(--Secondary-100, rgba(238, 222, 216, 0.48)) 100%);
+}
+
+.dir {
+  direction: ltr;
+}
+
+.dir-r {
+  direction: rtl;
+}
+
+.img-project {
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.00) 27.63%);
+}
+
+.back-project {
+  background: linear-gradient(180deg, #FFF 0%, #FCF7F1 100%);
+}
+
+.back-det-project {
+  background: linear-gradient(90deg, var(--Primary-50, rgba(248, 240, 227, 0.32)) 0%, var(--Secondary-100, rgba(238, 222, 216, 0.32)) 100%), #FFF;
+}
+
+.floating-label-container {
+  position: relative;
+}
+
+.floating-label {
+  position: absolute;
+  top: -16px;
+  right: 32px;
+  background: white;
+  padding: 4px 8px;
+  font-size: 16px;
+  color: #a3a3a3;
+  line-height: 24px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type="date"],
+input[type="time"] {
+  -moz-appearance: textfield;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+}
+
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(6px);
+  }
+}
+
+.liner-back-trainig {
+  background: var(--Gredient, linear-gradient(90deg, var(--Primary-50, #F8F0E3) 0%, var(--Secondary-100, #EEDED8) 100%));
+}
+
+@keyframes toast-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 0.4s ease forwards;
+}
+
+@keyframes toast-timeout {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.animate-toast-timeout {
+  animation: toast-timeout 5s linear forwards;
+}
